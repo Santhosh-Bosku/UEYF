@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index</title>
+    <link rel="stylesheet" href="alpha.css">
+    <script src="alpha.js"></script>
+    <script>
+        var slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 500); // Change image every 2 seconds
+        }
+        </script>
+</head>
+<body>
+    <!-- <input type="checkbox" id="in1" class="df"> -->
+    <div id="wrapper">
+        <div class="rowone">
+            <div id="bgvid">
+                <video autoplay muted loop id="myVideo">
+                    <source src="images/videoplayback.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="rowtwo">
+            <input type="checkbox" id="in1" class="df">
+            <div id="container">
+                <div class="one section">
+                    <div id="mainLogo">
+                        <img src="images/logo white.png" alt="image" >
+                    </div>
+                    <button id="myBtn" onclick="myFunction()">
+                        <img src="images/pause.svg" alt="image" id="pause">
+                        <img src="images/play.svg" alt="image" id="play">
+                    </button>
+                    <a href="#second" id="go">
+                    <span>
+                        <img src="images/arrowdown.png" alt="arrow">
+                    </span>
+                    </a>
+                    <div id="menu">
+                        <header id="banner">
+                            <div class="row one">
+                                <div class="col" id="burger">
+                                    <label for="in1" class="col">
+                                        <div id="lineone"></div>
+                                        <div id="linetwo"></div>
+                                    </label>
+                                </div>
+                                <div id="logo" class="col">
+                                    <img src="images/logo black.png" alt="Logo" id="logoimg">
+                                </div>
+                            </div>
+                            <div class="row two"></div>
+                        </header>
+                        <div id="dropmenu">
+                            <div id="quiz" class="row">
+                                <h1>Quiz</h1>
+                                <li><a href="#">MATTHEW</a></li>
+                                <li><a href="#">MARK</a></li>
+                                <li><a href="#">LUKE</a></li>
+                                <li><a href="#">JOHN</a></li>
+                                <li><a href="#">ACTS</a></li>
+                                <li><a href="#">ROMANS</a></li>
+                                <li><a href="#">JAMES</a></li>
+                                <li><a href="#">GALATIANS</a></li>
+                                <li><a href="#">EPHESIANS</a></li>
+                                <li><a href="#">PHILIPPIANS</a></li>
+                                <li><a href="#">COLOSSIANS</a></li>
+                                <li><a href="#">1 JOHN 1</a></li>
+                                <li><a href="#">REVELATION</a></li>
+                                <li><a href="#">1 THESSALONIANS</a></li>
+                                <li><a href="#">2 THESSALONIANS</a></li>
+                                <li><a href="#">1 CORINTHIANS</a></li>
+                                <li><a href="#">HEBREWS</a></li>
+                            </div>
+                            <div id="memory-verses" class="row">
+                                <h1>Memory Verses</h1>
+                                <li><a href="#">Mark</a></li>
+                                <li><a href="#">Luke</a></li>
+                                <li><a href="#">John</a></li>
+                                <li><a href="#">Acts</a></li>
+                                <li><a href="#">Romans</a></li>
+                                <li><a href="#">Revelation</a></li>
+                                <li><a href="#">1Thessalonians</a></li>
+                                <li><a href="#">2Thessalonians</a></li>
+                                <li><a href="#">1Corinthians</a></li>
+                                <li><a href="#">Hebrews</a></li>
+                            </div>
+                            <div id="biographies" class="row">
+                                <h1>Biographies</h1>
+                                <li><a href="#">Adoniram Judson</a></li>
+                                <li><a href="#">Amy Carmichael</a></li>
+                                <li><a href="#">Betty Greene</a></li>
+                                <li><a href="#">Brother Andrew</a></li>
+                                <li><a href="#">Cameron Townsend</a></li>
+                                <li><a href="#">Clarence Jones</a></li>
+                                <li><a href="#">CT STUDD</a></li>
+                                <li><a href="#">Corrie Ten Boom</a></li>
+                                <li><a href="#">Count Zinzendorf</a></li>
+                                <li><a href="#">David Livingstone</a></li>
+                                <li><a href="#">Dietrich Bonhoeffer</a></li>
+                                <li><a href="#">D.L.Moody</a></li>
+                                <li><a href="#">Elisabeth Elliot</a></li>
+                                <li><a href="#">Richard Wurmbrand</a></li>
+                                <li><a href="#">William Booth</a></li>
+                                <li><a href="#">William Carey</a></li>
+                                <h2>Telugu</h2>
+                                <li><a href="#">ఆదోనిరామ్ జడ్సన్ - Adoniram Judson</a></li>
+                                <li><a href="#">హడ్సన్ టేలర్ - Hudson Taylor</a></li>
+                                <li><a href="#">చార్లెస్ జి. ఫిన్నీ - Charles G. Finny</a></li>
+                                <li><a href="#">హెన్రీ మార్టిన్ - Henry Martin</a></li>
+                                <li><a href="#">Bro.భక్త్ సింగ్ - Bro.Bhakt Singh</a></li>
+                                <li><a href="#">జె.హైనరీష్ అర్నాల్డ్ - Johann Heinrich Arnold</a></li>
+                                <li><a href="#">ఎలిజబెత్ ఫ్రై - Elizabeth Fry</a></li>
+                                <li><a href="#">మాథ్యూ హెన్రీ - Matthew Henry</a></li>
+                                <li><a href="#">గ్రేహం స్టేయిన్స్ - Graham</a></li>
+                            </div>
+                            <div id="study-team" class="row">
+                                <h1>Study Team</h1>
+                                <li><a href="#">Hyderabad Team</a></li>
+                                <li><a href="#">Jangaon Team</a></li>
+                                <li><a href="#">Warangal Team</a></li>
+                                <li><a href="#">Chicago Team</a></li>
+                                <h3><li><a href="#">Favorite Verses</a></h2></li>
+                                <h3><li><a href="#">Daily Devotion</a></h2></li>
+                                <h3><li><a href="#">Bible study Tools</a></h2></li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="two section" id="second">
+                    <div class="row">
+                        <div class="col letter">
+                            <p>Dear Believer,</p>
+                            <p>The purpose of this site is to encourage you to learn The WORD of GOD and teach The WORD of GOD. If you're a Leader, please send in your details for a free STUDY BIBLE.  May you grow everyday in The LORD reading GOD's word, living according to The WORD, and spending time in Prayer. May The Author (Holy Spirit) teach you and help you understand GOD's word everyday. We will be praying for you and your Team.</p>
+                            <p>in Christ,</p>
+                            <p id="team">Team UEYF</p>
+                        </div>
+                        <div class="col gallery">
+                            <div id="slide" class="container">
+                                <img src="images/pexels-photo-326055.jpg" alt="groupimage" title="Group Image of organization">
+                                <!-- <div class="slideshow-container">
+
+                                    <div class="mySlides fade">
+                                    <img src="images/pexels-photo-326055.jpg" style="width: 100%;">
+                                    </div>
+                                    
+                                    <div class="mySlides fade">
+                                    <img src="images/pexels-photo-414612.jpeg">
+                                    </div>
+                                    
+                                    <div class="mySlides fade">
+                                    <img src="images/rose-blue-flower-rose-blooms-67636.jpeg">
+                                    </div>
+                                    
+                                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                    <a class="next" onclick="plusSlides(1)">&#10095;</a> 
+                                    
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="three section">
+                    <div class="col">
+                        <div class="row leader">
+                            <div class="box">
+                                <div class="img"></div>
+                                <div class="data">
+                                    <h1>Leader</h1>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste soluta saepe aperiam nihil quod culpa tenetur dolorem! Ex, dicta voluptas.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row biblestudy">
+                            <div class="box">
+                                <div class="img">
+                                    <!-- <img src="images/Study Team BG.jpg" alt="image"> -->
+                                </div>
+                                <div class="data">
+                                    <h1>Study Team</h1>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste soluta saepe aperiam nihil quod culpa tenetur dolorem! Ex, dicta voluptas.</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row quiz">
+                            <div class="box">
+                                <div class="img"></div>
+                                <div class="data">
+                                    <h1>Quiz</h1>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste soluta saepe aperiam nihil quod culpa tenetur dolorem! Ex, dicta voluptas.</p>
+                                </div>
+                            </div>     
+                        </div>
+                    </div>
+                </div>
+                <div class="four section">
+                    <h1>Life's Lived for Christ</h1>
+                    <div id="gridContainer">
+                        <div class="box box1">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="bio/Adoniram Judson.jpg" alt="Adoniram Judson">
+                                </div>
+                                <div class="data">
+                                    <p>Adoniram Judson</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box box2">
+                            <div class="content">
+                                <div class="img ">
+                                    <img src="bio/David Livingstone.jpg" alt="David Livingstone">
+                                </div>
+                                <div class="data">
+                                    <p>David Livingstone</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="box box3">
+                            <div class="content">
+                                <div class="img ">
+                                    <img src="bio/Betty Greene.jpg" alt="Betty Greene">
+                                </div>
+                                <div class="data">
+                                    <p>Betty Greene</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box box4">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="bio/brother Andrew.jpg" alt="brother andrew">
+                                </div>
+                                <div class="data">
+                                    <p>brother andrew</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box box5">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="bio/cameron townsend.jpg" alt="Cameron Townsend">
+                                </div>
+                                <div class="data">
+                                    <p>Cameron Townsend</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box box6">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="bio/Clarence jones.jpg" alt="Clarence Jones">
+                                </div>
+                                <div class="data">
+                                    <p>Clarence Jones</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box box7">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="bio/ct studd.jpg" alt="CT STUDD">
+                                </div>
+                                <div class="data">
+                                    <p>CT STUDD</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box box8">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="bio/Corrie Ten Boom.jpg" alt="Corrie Ten Boom">
+                                </div>
+                                <div class="data">
+                                    <p>Corrie Ten Boom</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box box9">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="bio/Count Zinzendorf.jpg" alt="Count Zinzendorf">
+                                </div>
+                                <div class="data">
+                                    <p>Count Zinzendorf</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box box10">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="bio/Amy_Carmichael.jpg" alt="Amy Carmichael">
+                                </div>
+                                <div class="data">
+                                    <p>Amy Carmichael</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box box11">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="bio/Dietrich Bonhoeffer.jpg" alt="Dietrich Bonhoeffer">
+                                </div>
+                                <div class="data">
+                                    <p>Dietrich Bonhoeffer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box box12">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="bio/D.L.Moody.jpg" alt="D.L.Moody">
+                                </div>
+                                <div class="data">
+                                    <p>D.L.Moody</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box box13">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="bio/Elisabeth Elliot.jpg" alt="Elisabeth Elliot">
+                                </div>
+                                <div class="data">
+                                    <p>Elisabeth Elliot</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box box14">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="bio/Richard Wurmbrand.jpg" alt="Richard Wurmbrand">
+                                </div>
+                                <div class="data">
+                                    <p>Richard Wurmbrand</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button>Expore More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
