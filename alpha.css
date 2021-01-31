@@ -1,0 +1,829 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#wrapper
+{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.rowone, .rowtwo
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.rowone
+{
+    z-index: 990;
+    position: fixed;
+}
+
+.rowtwo
+{
+    /* background-color: green; */
+    z-index: 995;
+    position: relative;
+}
+
+#bgvid
+{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 990 !important;
+    overflow-y: hidden;
+}
+
+#bgvid #myVideo
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    min-width: 100%;
+    /* height: 100vh; */
+    /* margin: -55px 0 0 0; */
+}
+
+#container
+{
+    width: 100%;
+    z-index: 998 !important;
+}
+
+#myBtn
+{
+    display: block;
+    position: absolute;
+    bottom: 40px;
+    right: 30px;
+    offset: none;
+    width: 60px;
+    height: 60px;
+    border: 4px solid #ffffff;
+    border-radius: 50% !important;
+    background-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    transition: 0.5s;
+    font-size: 18px;
+    font-weight: 400;
+    outline: none;
+    z-index: 998;
+    cursor: pointer;
+}
+
+#myBtn img
+{
+    height: 50%;
+    position: relative;
+}
+
+#myBtn #play
+{
+    display: none;
+    padding: 0 0 0 3px;
+}
+
+#myBtn:hover
+{
+    font-size: 18px;
+    font-weight: 400;
+    border-color: black;
+    transition: 0.5s;
+}
+
+.one
+{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#mainLogo
+{
+    position: absolute;
+    width: 60%;
+    height: 44%;
+    top: 20%;
+    bottom: 0;
+    left: 20%;
+    right: 0;
+    z-index: 990;
+    opacity: 8;
+    transition: all 0.3s ease;
+}
+
+@keyframes go
+{
+    0%{transform: translateY(0px);}
+    50%{transform: translateY(30px);}
+    100%{transform: translateY(0px);}
+}
+
+#go
+{
+    width: 60px;
+    height: 40px;
+    position: absolute;
+    bottom: 60px;
+    box-shadow: 1px solid black;
+    animation: go 2s infinite ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#go img
+{
+    width: 30px;
+    height: 20px;
+}
+
+#menu
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#banner
+{
+    position: fixed;
+    /* background-color: rgb(255, 255, 255); */
+    width: 100%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 400;
+    transition: all 0.5s linear;
+    z-index: 999;
+}
+
+#banner .row
+{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: row; 
+}
+
+#banner .one #burger
+{
+    width: 34%;
+    height: 100%;
+    display: flex;
+    align-items: center;   
+    justify-content: center !important; 
+}
+
+#banner .one #burger label
+{
+    cursor: pointer;
+}
+
+#banner .row
+{
+    background-color: initial;
+}
+
+#banner .row #burger, #logo
+{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+#logo img
+{
+    width: 5vw !important;
+    height: 20px !important;
+    cursor: pointer;
+    display: none;
+    transition: display 0.3s ease-in-out;
+}
+
+#dropmenu
+{
+    width: 90%;
+    padding: 0 5% 0 5%;
+    height: 91.5%;
+    background-color: #ccc;
+    position: fixed;
+    top: 65px;
+    z-index: 999;
+    opacity: 0;
+    transition: all 0.3s linear;
+    visibility: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#dropmenu .row
+{
+    width: 25%;
+    padding: 0 0.5%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    overflow-y: scroll;
+    /* position: relative; */
+}
+
+#dropmenu .row li
+{
+    list-style: none;
+    width: 100%;
+    transition: 0.2s linear;
+}
+
+#dropmenu .row a
+{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 5px 0 5px 0;
+    font-size: 17px;
+}
+
+#dropmenu .row li:hover
+{
+    background-color: rgba(0, 0, 0, 0.377);
+    transition: 0.2s linear;
+}
+
+#dropmenu .row h1
+{
+    margin: 20px 0 30px 0;
+    font-size: 25px;
+    /* position: absolute; */
+}
+
+#dropmenu .row h2
+{
+    margin: 20px 0 30px 0;
+    font-size: 22px;
+}
+
+#dropmenu .row h3
+{
+    margin: 10px 0 10px 0;
+    font-size: 22px;
+    width: 100%;
+}
+
+#dropmenu .row h3 a
+{
+    color: black !important;
+    width: 100%;
+}
+
+#dropmenu .row::-webkit-scrollbar 
+{
+    width: 2px;
+}
+   
+#dropmenu #biographies::-webkit-scrollbar-track 
+{
+    box-shadow: inset 0 0 6px rgb(177, 177, 177);
+}
+   
+#dropmenu #quiz::-webkit-scrollbar-track 
+{
+    /* box-shadow: inset 0 0 6px rgb(177, 177, 177); */
+}
+   
+#dropmenu .row::-webkit-scrollbar-thumb 
+{
+    background-color: rgb(0, 0, 0);
+    outline: none;
+}
+
+header #burger #lineone, #linetwo
+{
+    width: 30px;
+    height: 5px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s linear;
+}
+
+header #burger #lineone
+{
+ margin: 0 0 5px 0;
+
+}
+
+.df
+{
+    display: none;
+}
+
+#in1:checked ~ #container .section #banner #lineone
+{
+    transform: rotate(45deg) translateY(6px);
+}
+
+#in1:checked ~ #container .section #banner #linetwo
+{
+    transform: rotate(-45deg) translateY(-6px);
+}
+
+#in1:checked ~ #container .section #banner
+{
+    background-color: #ccc !important;
+}
+
+#in1:checked ~ #container .section #banner #logo img
+{
+    display: block !important;
+    transition: 0.3s ease-in-out;
+}
+
+#in1:checked ~ #container .section #dropmenu
+{
+    opacity: 10;
+    visibility: visible;
+}
+
+.section
+{
+    width: 100%;
+    height: 100vh;
+}
+
+.two, .three, .four
+{
+    background-color: #ffffff;
+}
+
+.two .row
+{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.two .row .col
+{
+    width: 50%;
+    /* margin:  0 0 2px 0; */
+    height: 90%;
+    /* background-color: #ccc; */
+}
+
+.letter
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.letter p
+{
+    width: 80%;
+    margin: 0 0 20px;
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.letter #team
+{
+    margin: -15px 0 0 0;
+}
+.gallery
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery .container
+{
+    width: 80% !important;
+    height: 50%;
+    /* background-color: black; */
+    /* border: 1px solid black; */
+    overflow: hidden;
+    position: relative;
+}
+
+.slideshow-container 
+{
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides 
+{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+ 
+img 
+{
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.prev, .next 
+{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.next 
+{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+.prev:hover, .next:hover 
+{
+    background-color: rgba(0,0,0,0.8);
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+
+.fade 
+{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.gallery .container #slider
+{
+    width: 300% !important;
+    height: 100% !important;
+    background-color: beige;
+    display: flex;
+    flex-direction: row;
+}
+
+#slider .one
+{
+    /* background-color: red; */
+    width: 100%;
+}
+#slider .three
+{
+    /* background-color: green; */
+    width: 100%;
+}
+#slider .two
+{
+    /* background-color: blue; */
+    width: 100%;
+}
+
+.three
+{
+    background: url("images/back2.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.three .col
+{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.three .col .row
+{
+    width: 25%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.three .col .row .box
+{
+    width: 90%;
+    height: 98%;
+    background-color: rgba(0, 0, 0, 0.144);
+    position: relative;
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+
+}
+
+.three .col .row .box .img
+{
+    position: absolute;
+    width: 100%;
+    height: 100;
+}
+
+.three .col .row .box .data
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 997;
+    background-color: rgba(0, 0, 0, 0.603);
+    transform: translateY(90%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    color: rgb(0, 0, 0);
+    /* font-size-adjust: inherit; */
+    /* font-size: px; */
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: 0.3s linear;
+
+}
+
+.three .col .row .box .data h1
+{
+    text-align: center;
+    width: 100%;
+    margin: 0 0 50px 0 ;
+    padding: 0 0 5px 0;
+    background-color: rgba(255, 255, 255, 0.603);
+/*  */
+}
+.three .col .row .box .data p
+{
+    text-align: center;
+    width: 90%;
+    margin: 0 0 50px 0 ;
+    padding: 0 0 5px 0;
+    color: white;
+    margin: 0 auto;
+    /* background-color: rgba(255, 255, 255, 0.603); */
+/*  */
+}
+
+
+.three .col .row .box:hover
+{
+    box-shadow:15px 15px 20px black;
+    width: 100%;
+    height: 105%;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    /* background-color: black; */
+}
+
+.three .col .row .box:hover>.data
+{
+    transform: translateY(50%);
+    transition: 0.3s linear;
+}
+
+
+
+.three .col .leader .box
+{
+    background-image: url("images/leader\ BG.jpg");
+    background-size: 100% 100%;
+}
+.three .col .biblestudy .box
+{
+    background-image: url("images/Study\ Team\ BG.jpg");
+    background-size: 100% 100%;
+}
+
+.three .col .quiz .box
+{
+    background-image: url("images/Quiz\ Background.jpg");
+    background-size: 100% 100%;
+}
+
+
+.four
+{
+    maX-width: 100%;
+    height: auto;
+    background-color: #ccc !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 0 10px 0;
+    /* overflow: hidden; */
+}
+
+.four h1
+{
+    margin: 40px 0;
+    color: white;
+    padding: 10px;
+    border-bottom: 4px solid red;
+    /* text-decoration: underline; */
+    text-decoration-color: red;
+}
+
+.four button
+{
+    margin: 30px 0;
+    width: 120px;
+    height: 30px;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.637);
+    font-size: 16px;
+    transition: 0.5s ease-in-out;
+}
+
+.four button:hover
+{
+    background-color: black;
+    color: #ccc;
+    transition: 0.5s ease-in-out;
+}
+
+.four #gridContainer
+{
+    position: relative;
+    width: 95%;
+    height: 150vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(300px, auto);
+    grid-gap: 0.5em;
+    align-content: center;
+    overflow: hidden;
+    padding: 10px 10px 40px 10px;
+    
+}
+
+.four #gridContainer .box 
+{
+    background-color: #ccc;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.four #gridContainer .box:hover
+{
+    /* background-color: rgb(82, 82, 82); */
+    text-align: center;
+    display: grid;
+    place-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.four #gridContainer .box .content
+{
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+    display: grid   ;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.four #gridContainer .box .data, .img
+{
+    position: absolute;
+    overflow: hidden !important;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.four #gridContainer .box .img
+{
+    width: 105%;
+    height: 105%;
+}
+
+.four #gridContainer .box .data
+{
+    opacity: 0;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    font-size: 24px;
+}
+
+.four #gridContainer .box .content .img img
+{
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.four #gridContainer .box:hover > .content .data
+{
+    background-color: rgba(0, 0, 0, 0.733);
+    opacity: 4;
+    transition: all 0.3s ease-in-out;
+}
+
+.four #gridContainer .box:hover > .content .img
+{
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.four #gridContainer .box:hover
+{
+    box-shadow: 0 0 10px solid white;
+    transition: all 0.3s ease-in-out;
+}
+
+.four #gridContainer .box1
+{
+    grid-row: 1/3;
+    grid-column: 1/2;
+}
+
+.four #gridContainer .box2
+{
+    grid-column: 2/4;
+    grid-row: 1/2;
+}
+
+.four #gridContainer .box7
+{
+    grid-column: 4/6;
+}
+
+.four #gridContainer .box8
+{
+    grid-column: 1/3;
+}
+
+.four #gridContainer .box11
+{
+    grid-row: 3/5;
+    grid-column: 5/6;
+}
+
+.four #gridContainer .box14
+{
+    grid-row: 4/5;
+    grid-column: 3/5;
+}
+
+
