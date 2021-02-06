@@ -2,7 +2,7 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
 if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50 ) {
-document.getElementById("banner").style.backgroundColor = "white";
+document.getElementById("banner").style.backgroundColor = "rgba(0, 0, 0, 0.527)";
 document.getElementById("lineone").style.backgroundColor = "black";
 document.getElementById("linetwo").style.backgroundColor = "black";
 document.getElementById("lineone").style.display = "block";
@@ -17,7 +17,7 @@ document.getElementById("go").style.display = "none";
 
 }
 else {
-document.getElementById("banner").style.backgroundColor = "rgba(0, 0, 0, 0.527)";
+document.getElementById("banner").style.backgroundColor = "rgba(240, 255, 255, 0)";
 document.getElementById("lineone").style.backgroundColor = "white";
 document.getElementById("linetwo").style.backgroundColor = "white";
 document.getElementById("lineone").style.display = "block";
