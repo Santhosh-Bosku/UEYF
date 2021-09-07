@@ -2,7 +2,7 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
 if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50 ) {
-document.getElementById("banner").style.backgroundColor = "rgba(255, 255, 255, 0)";
+document.getElementById("banner").style.backgroundColor = "rgba(255, 255, 255, 1)";
 document.getElementById("lineone").style.backgroundColor = "black";
 document.getElementById("linetwo").style.backgroundColor = "black";
 document.getElementById("lineone").style.display = "block";
